@@ -1,9 +1,60 @@
 html {
   font-size: 20px;
-  display: flex;
-
+  font-family: 'Open-sans', sans-serif, arial;
 }
 
 @@font-face {
-  src: url();
+  src: url('fonts/OpenSans-Regular.ttf');
+  font-family: Open-sans;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@@font-face {
+  src: url('fonts/OpenSans-Bold.ttf');
+  font-family: Open-sans-bold;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.header{
+  width: 100%;
+  height: 962px;
+  background-image: url('img/football_1920.jpg');
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: #000000;
+  background-size: cover;
+}
+
+.header::after{
+  content: "";
+  background-color: #212548;
+  opacity: 0.9;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+@@media (max-width: 320px) {
+  .head-img {
+    background-image: url('img/football_767.jpg');
+  }
+}
+
+@@media (min-width: 768px) {
+  .head-img {
+    background-image: url('img/football_1280.jpg');
+  }
+}
+.main-logo {
+  font-size:
+}
+.head-logo {
+  color: #fff;
+  z-index: 1;
 }
