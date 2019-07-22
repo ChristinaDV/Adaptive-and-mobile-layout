@@ -1,30 +1,59 @@
-html {
-  font-size: 20px;
-  font-family: 'Open-sans', sans-serif, arial;
-}
-
-@@font-face {
-  src: url('fonts/OpenSans-Regular.ttf');
-  font-family: Open-sans;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@@font-face {
-  src: url('fonts/OpenSans-Bold.ttf');
+@font-face {
+  src: url("fonts/OpenSans-Bold.ttf") format("ttf"),
+       url("fonts/OpenSans-Bold.woff") format("woff"),
+       url("fonts/OpenSans-Bold.woff2") format("woff2");
   font-family: Open-sans-bold;
-  font-weight: 700;
+  font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  src: url("fonts/OpenSans-Regular.ttf") format("ttf"),
+       url("fonts/OpenSans-Regular.woff") format("woff")
+       url("fonts/OpenSans-Regular.woff2") format("woff2");
+  font-family: Open-sans;
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open-sans', Arial, sans-serif;
+  font-size: 1.6rem;
+   margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  box-sizing: border-box;
+}
+
+/* header  */
+
+.icon {
+  fill: #fff;
+}
+
+@media (max-width: 767px){
+.header_logo, .footer_logo {
+  width: 12rem;
+}
+.header_logo, .footer_logo, .icon {
+  
+}
 }
 
 .header{
-  width: 100%;
+  max-width: 100%;
   height: 962px;
-  background-image: url('img/football_1920.jpg');
-  background-repeat: no-repeat;
   position: relative;
-  background-color: #000000;
-  background-size: cover;
 }
 
 .header::after{
@@ -39,14 +68,19 @@ html {
   bottom: 0;
 }
 
+.head_image {
+  width: 100%;
+  background-image: url('img/football_1920.jpg');
+  background-size: cover;
+}
 
-@@media (max-width: 320px) {
+@media (max-width: 320px) {
   .head-img {
     background-image: url('img/football_767.jpg');
   }
 }
 
-@@media (min-width: 768px) {
+@media (min-width: 768px) {
   .head-img {
     background-image: url('img/football_1280.jpg');
   }
